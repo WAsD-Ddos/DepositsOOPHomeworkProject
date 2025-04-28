@@ -17,9 +17,9 @@ public:
 		//cout << "Default-construction " << endl;
 		name = "no name";
 		age = 18;
-		deposit_days = 1;
-		deposit = 0;
-		persent = 0;
+		deposit_days = 10;
+		deposit = 1000;
+		persent = 1.0;
 		attitude = false;
 	}
 	//canonical construction
@@ -40,7 +40,7 @@ public:
 
 
 
-	string toString() {
+	string getInfo() {
 		string res = "The user name: " + name + "\n";
 		res += "The age user: " + to_string(age) + "\n";
 		res += "The user deposit days: " + to_string(deposit_days) + "\n";
