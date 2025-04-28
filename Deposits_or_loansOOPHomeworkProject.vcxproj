@@ -128,9 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Deposit.h" />
+    <ClInclude Include="initializer.h" />
     <ClInclude Include="maint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="initializer.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
