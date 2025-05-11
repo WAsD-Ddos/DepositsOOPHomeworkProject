@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Clients.h" />
     <ClInclude Include="Deposit.h" />
     <ClInclude Include="initializer.h" />
     <ClInclude Include="maint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Clients.cpp" />
     <ClCompile Include="Deposit.cpp" />
     <ClCompile Include="initializer.cpp" />
     <ClCompile Include="main.cpp" />
