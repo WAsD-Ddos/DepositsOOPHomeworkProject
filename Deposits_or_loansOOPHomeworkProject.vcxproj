@@ -131,12 +131,14 @@
     <ClInclude Include="Deposit.h" />
     <ClInclude Include="initializer.h" />
     <ClInclude Include="maint.h" />
+    <ClInclude Include="Queue.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Clients.cpp" />
     <ClCompile Include="Deposit.cpp" />
     <ClCompile Include="initializer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Queue.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
