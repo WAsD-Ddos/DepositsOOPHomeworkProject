@@ -35,9 +35,48 @@ Deposit Clients::getClient(int index)
 	}
 	return Deposit("", 0, 0, 0, 0.0, false);
 }
-//void Group::add(Student student){}
-//void Group::remove(Student student){}
-//void Group::remove(int index){}
+void Clients::add(Deposit client) {
+    Deposit* newList = new Deposit[count + 1];
+    for (int i = 0; i < count; i++) {
+        newList[i] = list[i];
+    }
+    newList[count] = client;
+    if (list != nullptr) {
+        delete[] list;
+    }
+    list = newList;
+    count++;
+}
+
+void Clients::remove(Deposit client) {
+    for (int i = 0; i < count; i++) {
+        if (client.getName() == list[i].getName()
+            && client.getAge() == list[i].getAge()
+            && client.getDepositDays() == list[i].getDepositDays()
+            && client.getDeposit() == list[i].getDeposit()
+            && client.getPersent() == list[i].getPersent()
+            && client.isAttitude() == list[i].isAttitude()) {
+            remove(i);
+            return;
+        }
+    }
+}
+
+void Clients::remove(int index) {
+    if (index < 0 || index >= count) {
+        return;
+    }
+    Deposit* newList = new Deposit[count - 1];
+    for (int i = 0; i < index; i++) {
+        newList[i] = list[i];
+    }
+    for (int i = index + 1; i < count; i++) {
+        newList[i - 1] = list[i];
+    }
+    delete[] list;
+    list = newList;
+    count--;
+}
 void Clients::set(Deposit cl1, Deposit cl2)
 {
 	for (int i = 0; i < count; i++)

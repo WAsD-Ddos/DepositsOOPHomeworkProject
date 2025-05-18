@@ -10,9 +10,9 @@ class Clients
 		~Clients();
 
 		Deposit getClient(int index);
-		//void add(Student student);
-		//void remove(Student student);
-		//void remove(int index);
+		void add(Deposit client);
+		void remove(Deposit client);
+		void remove(int index);
 		void set(Deposit cl1, Deposit cl2);
 		void set(int index, Deposit st2);
 
